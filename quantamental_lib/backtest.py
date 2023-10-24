@@ -46,6 +46,10 @@ class Backtest:
         df['Daily Returns'] = self._daily_returns
         return df
     
+    def hit_ratio(self):
+        positive_returns = (self._daily_returns > 0)
+        return sum(positive_returns)/len(self._daily_returns)
+    
     def cumulative_daily_returns(self, df=True):
         self._preprocess()
         if not df:
