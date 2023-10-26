@@ -1,8 +1,6 @@
 import numpy as np
 from datetime import timedelta, date
 import yfinance as yf
-import logging
-logging.getLogger('yfinance').setLevel(logging.CRITICAL)
 import requests
 import pandas as pd
 import json

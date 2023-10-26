@@ -623,8 +623,6 @@ class GradientPolicy(nn.Module):
             last_action = torch.from_numpy(last_action).to(device)
 
         last_stocks, cash_bias = self._process_last_action(last_action)
-        #print('obs',sum(sum(sum(sum(torch.isnan(observation))))))
-        #print(last_stocks)
         
         observation = self._fix_tensor(observation)
         last_stocks = self._fix_tensor(last_stocks)
